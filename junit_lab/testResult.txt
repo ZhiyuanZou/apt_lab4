@@ -1,0 +1,91 @@
+..F........F..46341* 46341 = -2147479015
+46340* 46340 = 2147395600
+low high: 0/1 46340/1
+square of midpoint is: 536848900/1
+low high: 0/1 23170/1
+square of midpoint is: 134212225/1
+low high: 0/1 11585/1
+square of midpoint is: 134212225/4
+low high: 0/1 11585/2
+square of midpoint is: 134212225/16
+low high: 0/1 11585/4
+square of midpoint is: 134212225/64
+low high: 0/1 11585/8
+square of midpoint is: 134212225/256
+low high: 0/1 11585/16
+square of midpoint is: 134212225/1024
+low high: 0/1 11585/32
+square of midpoint is: 134212225/4096
+low high: 0/1 11585/64
+square of midpoint is: 134212225/16384
+low high: 0/1 11585/128
+square of midpoint is: 134212225/65536
+low high: 0/1 11585/256
+square of midpoint is: 134212225/262144
+low high: 0/1 11585/512
+square of midpoint is: 134212225/1048576
+low high: 0/1 11585/1024
+square of midpoint is: 134212225/4194304
+low high: 0/1 11585/2048
+square of midpoint is: 134212225/16777216
+low high: 0/1 11585/4096
+square of midpoint is: 134212225/67108864
+low high: 0/1 11585/8192
+square of midpoint is: 134212225/268435456
+low high: 0/1 11585/16384
+square of midpoint is: 134212225/1073741824
+low high: 11585/32768 11585/16384
+square of midpoint is: 1/0
+low high: 11585/32768 34755/65536
+square of midpoint is: -1/0
+low high: 57925/131072 34755/65536
+square of midpoint is: -1/0
+low high: 127435/262144 34755/65536
+square of midpoint is: -1/0
+low high: 266455/524288 34755/65536
+square of midpoint is: 1/0
+low high: 266455/524288 544495/1048576
+square of midpoint is: 1/0
+low high: 266455/524288 1077405/2097152
+square of midpoint is: 1/0
+low high: 266455/524288 2143225/4194304
+square of midpoint is: -1/0
+low high: 4274865/8388608 2143225/4194304
+square of midpoint is: -1/0
+F.F..F
+Time: 0.011
+There were 5 failures:
+1) testDividedByZero(RationalTest)junit.framework.AssertionFailedError: 2/0 should not be valid
+	at RationalTest.testDividedByZero(RationalTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at RationalTest.main(RationalTest.java:50)
+2) testLess(RationalTest)junit.framework.AssertionFailedError
+	at RationalTest.testLess(RationalTest.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at RationalTest.main(RationalTest.java:50)
+3) testRoot(RationalTest)junit.framework.AssertionFailedError
+	at RationalTest.testRoot(RationalTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at RationalTest.main(RationalTest.java:50)
+4) testToString(RationalTest)junit.framework.AssertionFailedError
+	at RationalTest.testToString(RationalTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at RationalTest.main(RationalTest.java:50)
+5) testDividedByZero2(RationalTest)junit.framework.AssertionFailedError: 2/0 should not be valid
+	at RationalTest.testDividedByZero2(RationalTest.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at RationalTest.main(RationalTest.java:50)
+
+FAILURES!!!
+Tests run: 15,  Failures: 5,  Errors: 0
+
