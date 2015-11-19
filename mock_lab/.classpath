@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/Users/zou/Documents/javaworkspace/apt_lab4/mock_lab/mock_lab/selenium-server-standalone-2.11.0.jar"/>
+	<classpathentry kind="lib" path="/Users/zou/Documents/javaworkspace/apt_lab4/mock_lab/mock_lab/mockobjects-0.6-j1.4-j2ee1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/zou/Documents/javaworkspace/apt_lab4/mock_lab/mock_lab/mockobjects-0.6-core.jar"/>
+	<classpathentry kind="lib" path="/Users/zou/Documents/javaworkspace/apt_lab4/mock_lab/mock_lab/junit-4.11.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
