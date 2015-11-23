@@ -1,5 +1,3 @@
-package mock_lab;
-
 import javax.servlet.http.*;
 
 import org.junit.Before;
@@ -14,21 +12,25 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import junit.framework.*;
 
 
 public class TestTestingConverter {
 	TestingLabConverterServlet testServlet;
-	MockHttpServletRequest request = 
-		      new MockHttpServletRequest();
-	MockHttpServletResponse response = 
-		      new MockHttpServletResponse();
-	@Before	    
-	public void setup(){
+    MockHttpServletRequest request;
+    MockHttpServletResponse response;
+
+    @Before
+    public void setup(){
 			testServlet = new TestingLabConverterServlet();
+            MockHttpServletRequest request =
+                new MockHttpServletRequest();
+            MockHttpServletResponse response =
+                new MockHttpServletResponse();
 		    response.setExpectedContentType("text/html");
 	}
-	
-	@Test
+
+    @Test
 	public void testNullTemp() throws ServletException, IOException{
 		testServlet.doPost(request, response);
 		response.verify();
@@ -37,7 +39,7 @@ public class TestTestingConverter {
 				+ "</h2></body></html>\n",response.getOutputStreamContents());
 	}
 	
-	@Test
+    @Test
 	public void testTempValid() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", "32.0");
 		testServlet.doPost(request, response);
@@ -47,7 +49,7 @@ public class TestTestingConverter {
 				+ "</h2>\n"));
 	}
 	
-	@Test
+    @Test
 	public void testTempTrim() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", "   32.0   ");
 		testServlet.doPost(request, response);
@@ -57,7 +59,7 @@ public class TestTestingConverter {
 				+ "</h2>\n"));
 	}
 	
-	@Test()
+    @Test
 	public void testTempInValid() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", " abc32.0");
 		testServlet.doPost(request, response);
@@ -69,7 +71,7 @@ public class TestTestingConverter {
 				+ "</h2></body></html>"));
 	}
 	
-	@Test
+    @Test
 	public void testTempAustin() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", "   32.0   ");
 		testServlet.doPost(request, response);
@@ -77,7 +79,7 @@ public class TestTestingConverter {
 		assertTrue(response.getOutputStreamContents().contains("<p><h3>The temperature in Austin is "));
 	}
 	
-	@Test
+    @Test
 	public void testGetNullTemp() throws ServletException, IOException{
 		testServlet.doGet(request, response);
 		response.verify();
@@ -86,7 +88,7 @@ public class TestTestingConverter {
 				+ "</h2></body></html>\n",response.getOutputStreamContents());
 	}
 	
-	@Test
+    @Test
 	public void testGetTempValid() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", "32.0");
 		testServlet.doGet(request, response);
@@ -95,7 +97,7 @@ public class TestTestingConverter {
 				+ "</head><body><h2>" + 32.0 + " Farenheit = " + 0 + " Celsius "
 				+ "</h2>\n"));
 	}
-	
+    
 	@Test
 	public void testGetTempTrim() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", "   32.0   ");
@@ -106,7 +108,7 @@ public class TestTestingConverter {
 				+ "</h2>\n"));
 	}
 	
-	@Test()
+    @Test
 	public void testGetTempInValid() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", " abc32.0");
 		testServlet.doGet(request, response);
@@ -118,7 +120,7 @@ public class TestTestingConverter {
 				+ "</h2></body></html>"));
 	}
 	
-	@Test
+    @Test
 	public void testGetTempAustin() throws ServletException, IOException{
 		request.setupAddParameter("farenheitTemperature", "   32.0   ");
 		testServlet.doGet(request, response);

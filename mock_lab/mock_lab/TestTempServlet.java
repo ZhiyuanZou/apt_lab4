@@ -1,5 +1,3 @@
-package mock_lab;
-
 import junit.framework.*;
 import com.mockobjects.servlet.*;
 

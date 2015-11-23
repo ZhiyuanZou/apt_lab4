@@ -1,5 +1,3 @@
-package mock_lab;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
